@@ -10,7 +10,8 @@ class UserServiceTest {
 
     UserRepository userRepository = mock(UserRepository.class);
 
-    UserService userService = mock(UserService.class);
+    UserService userService = new UserService(userRepository);
+
     @Test
     void getUserById() {
         long UserId = 123;
@@ -21,6 +22,9 @@ class UserServiceTest {
 
         // le resultat actuel de la methode
         User UserActuel = userService.getUserById(UserId);
+
+        // Vérification du résultat
+        assertEquals(UserAttendu, UserActuel);
 
         //le verification
         verify(userRepository).findUserById(UserId);
