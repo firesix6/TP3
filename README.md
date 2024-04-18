@@ -1,5 +1,4 @@
 Exo1:
-----
 On a deux classe:
 -> UserService: qui recuppere un objet utilsiateur en utilsiant son ID,
 -> User: c'est la classe qui defini l'utilisateur avec id et nom simplement, pour pouvoir faire la simulaiton apres
@@ -12,11 +11,9 @@ on a aussi une interface:
   4- on fait les verification 
 
 Exo2:
------
 en cours...
 
 Exo3:
------
 on a deux classes: 
 -> ProductService : contient une methode pour recupere un objet produit par son id
 -> Product: le produit en auestion definit par id et nom;
