@@ -9,10 +9,10 @@ on a aussi une interface:
   2- on definis le comportement du mock
   3- on defiri le resultat qui est supposé etre
   4- on fait les verification 
-
+-------------------------------------------------------------------------------------
 Exo2:
 en cours...
-
+--------------------------------------------------------------------------------------
 Exo3:
 on a deux classes: 
 -> ProductService : contient une methode pour recupere un objet produit par son id
@@ -35,5 +35,5 @@ On identifie trois cas de figure:
     2- on definit le comportement du mock pour qu'il leve un exception lors de l'apl pour le faillure du call
     3- on verifie tout cela apres comme ecrit 
 
-
+--------------------------------------------------------------------------------------------------------------------
 *to be continued....*
