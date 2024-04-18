@@ -1,5 +1,6 @@
 Exo1:
 On a deux classe:
+
 -> UserService: qui recuppere un objet utilsiateur en utilsiant son ID,
 -> User: c'est la classe qui defini l'utilisateur avec id et nom simplement, pour pouvoir faire la simulaiton apres
 on a aussi une interface: 
