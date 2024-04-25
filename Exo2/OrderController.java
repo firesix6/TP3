@@ -7,8 +7,8 @@ public class OrderController {
         this.orderService = os;
     }
 
-    public void createOrder(Order or){
-       orderService.createOrder(or);
+    public boolean createOrder(Order or){
+       return orderService.createOrder(or);
     }
 
 }

@@ -1,6 +1,9 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 class OrderControllerTest {
@@ -13,8 +16,25 @@ class OrderControllerTest {
     Order order = new Order(1,"nana");
 
     @Test
-    void createOrder() {
-        orderController.createOrder(order);
-        verify(orderService).createOrder(eq(order));
+    void createOrderSuccess() {
+        when(orderService.createOrder(order)).thenReturn(true);
+        boolean result = orderController.createOrder(order);
+        verify(orderService).createOrder(order);
+        assertTrue(result);
+    }
+
+    @Test
+    void createOrderFaillure() {
+        when(orderService.createOrder(order)).thenReturn(false);
+        boolean result = orderController.createOrder(order);
+        verify(orderService).createOrder(order);
+        assertEquals(result, false);
+    }
+    @Test
+    void createOrderFaillureToSave() {
+        when(orderDao.saveOrder(order)).thenReturn(false);
+        boolean result = orderController.createOrder(order);
+        verify(orderDao).saveOrder(order);
+        assertEquals(result, true);
     }
 }
