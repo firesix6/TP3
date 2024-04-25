@@ -11,7 +11,11 @@ on a aussi une interface:
   4- on fait les verification 
 -------------------------------------------------------------------------------------
 Exo2:
-en cours...
+On a deux classe:
+-> OrderController: fait la creation de createrOrder en appellant une autre orderService.createOrder(oder),
+-> orderService: fait l'enregistrement de createrOrder en appellant une autre orderDao.saveOrder(oder)
+on a aussi une interface:
+-> orderDao: qui rend un boolean si l'enregistrement a ete execute ou pas.
 --------------------------------------------------------------------------------------
 Exo3:
 on a deux classes: 
