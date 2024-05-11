@@ -35,6 +35,6 @@ class OrderControllerTest {
         when(orderDao.saveOrder(order)).thenReturn(false);
         boolean result = orderController.createOrder(order);
         verify(orderDao).saveOrder(order);
-        assertEquals(result, true);
+        assertEquals(result, false);
     }
 }
